@@ -1,0 +1,33 @@
+body {
+  background-color: lightslategrey;
+  font-family: sans-serif;
+}
+.container {
+  width: 400px;
+  height: 400PX;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+}
+.container input {
+  width: 300px;
+  height: 20px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.container button {
+  background-color:#295F98;
+  border: none;
+  width: 100px;
+  height: 25px;
+  margin-top: 20px;
+  color: white;
+}
