@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import LogIn from './components/LogIn'
 import './App.css'
 
 function App() {
-const[isLogIn,setIsLogIn]=useState(false);
+  const [isLogIn,setIsLogin]=useState(localStorage.getItem("isLogIn"))
+
   let userName
   let userPass
   const handleChangeName=(e)=>{
@@ -13,13 +14,20 @@ const[isLogIn,setIsLogIn]=useState(false);
     userPass=e.target.value
   }
   const handleLogeIn=()=>{
+
     if (userName==="admin"&& userPass==="admin"){
-      setIsLogIn(true)
+      setIsLogin(true)
+      localStorage.setItem("isLogIn",true)  
+      
     }
     else{
-      setIsLogIn(false)
+      setIsLogin(false)
+      localStorage.setItem("isLogIn",false)
     }
+    
+   
   }
+  
   return (
   <>
     {!isLogIn?<LogIn onChangeName ={handleChangeName} onChangePass={handleChangePass}  logInOnClick={handleLogeIn}/>:"Welcome"}
