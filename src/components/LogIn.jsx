@@ -1,6 +1,6 @@
 import {  useAuth } from "../App"
 const LogIn =()=>{
-    const authenticate=useAuth()
+    const authenticate=useAuth();
     let userName
     let userPass
     
@@ -25,6 +25,7 @@ const LogIn =()=>{
       }
       
      
+      
     }
     return( 
         <> 
